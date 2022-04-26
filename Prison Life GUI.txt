@@ -12,7 +12,13 @@ _G.autoKeyCard = false
     
     local Section3 = Tab:NewSection("Collection")
 
-
+    local Section4 = Tab:NewSection("OP")
+    
+    Section4:NewButton("Ultimate Trolling GUI", "Gives the UTG from Flamingo", function()
+    print("Clicked")
+    game.Players.LocalPlayer:Kick("You Are An Idiot")
+    end)
+    
     Section:NewDropdown("Give Gun", "Gives the localplayer a gun", {"M9", "Remington 870", "AK-47"}, function(v)
         local A_1 = game:GetService("Workspace")["Prison_ITEMS"].giver[v].ITEMPICKUP
         local Event = game:GetService("Workspace").Remote.ItemHandler
@@ -82,6 +88,10 @@ meleeRemote = mainRemotes['meleeEvent']
 killAura = true
 
 contextactionservice = game.ContextActionService
+
+function dumbass()
+    game.Players.Localplayer:Kick("You Are An Idiot.exe")
+end
 
 function toggleKillAura(actionName, inputState, inputObject)
 print('Doing the action : ' .. actionName)
